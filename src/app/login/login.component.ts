@@ -10,7 +10,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  employeeEmail!: string;
+  employeeId!: string;
   constructor(
     private router: Router,
     private dataStorageService : DataStorageService
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   onSubmit(form: any){
 
     if(!form.invalid){
-      this.dataStorageService.setItem({key: 'employee', value: this.employeeEmail})
+      this.dataStorageService.setItem({key: 'employee', value: this.employeeId})
       this.router.navigate(['/']);
     } 
   }

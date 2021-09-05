@@ -5,9 +5,9 @@
         <strong>Hack The Challenge</strong>
       </div>
       <div class="login-container-body">
-        <label for="employee">Username</label>
-        <input class="w-100" id="employee" name="employee" type="username" aria-describedby="employee-help" pInputText [(ngModel)]="employeeEmail" required #employee="ngModel"/>
-        <small *ngIf="!employee?.valid && (employee?.dirty || employee?.touched)">employeeid is required</small>
+        <label for="employee">Employee id</label>
+        <input class="w-100" id="employee" name="employee" type="username" aria-describedby="employee-help" pInputText [(ngModel)]="employeeId" required #employee="ngModel"/>
+        <small *ngIf="!employee?.valid && (employee?.dirty || employee?.touched)">employee id is required</small>
       </div>
       <div class="d-flex justify-content-center mb-2 login-container-footer">
         <button [disabled]="!loginForm.valid" type="submit" class="btn btn-success p-2"><strong>Login</strong></button>
