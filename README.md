@@ -7,13 +7,13 @@
   (2) sort existing ones
   (3) like/unlike existing ones and newly created ones
   
-Make sure angular cli is installed in your system.
+##Make sure angular cli is installed in your system.
 $ npm install -g @angular/cli
 
-clone the repo and navigate inside the repo and type in the terminal
+##clone the repo and navigate inside the repo and type in the terminal
 $ npm i (will install all packages required by app to run)
 
-To run this application
+##To run this application
 $ ng serve
 
 Ignore
