@@ -16,7 +16,7 @@
             </div>
             <div class="row new-challenge-form-section">
                 <label class="col-4">Tags</label>
-                <p-multiSelect class="col px-0" [appendTo]="'body'" [options]="tagsList" formControlName="tags" optionLabel="name" optionValue="name"></p-multiSelect>
+                <p-multiSelect class="col px-0" [appendTo]="'body'" [options]="tagsList" formControlName="tags" optionLabel="name" optionValue="name" [styleClass]="'w-100'"></p-multiSelect>
                  <div class="col-7 offset-4 validation-error" *ngIf="!newChallengeForm.controls['tags'].valid && newChallengeForm.controls['tags'].touched"> select atleast one tag</div>
             </div>   
         

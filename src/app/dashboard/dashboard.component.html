@@ -15,7 +15,7 @@
         <i class="pi pi-thumbs-up" [ngClass]="{'gold-liked': challenge.isLiked}" (click)="liked(challenge.id)"></i>
         <small class="font-weight-bold">&nbsp; ({{challenge.likesCount}})</small>
         <ng-container  *ngFor="let tag of challenge.tags">
-            <p-tag class="mx-2" value="{{tag}}"></p-tag>
+            <p-tag class="mx-2" value="{{tag | uppercase}}"></p-tag>
         </ng-container>
        </div>
       </div>
