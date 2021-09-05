@@ -1,19 +1,17 @@
-<div class="container">
-    <h1>Install Bootstrap 5 in Angular 12 - ItSolutionStuff.com</h1>
-    
-    <div class="card">
-      <div class="card-header">
-        Featured
+<div class="login">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+    <div class="login-container">
+      <div class="login-container-header">
+        <strong>Hack Expert</strong>
       </div>
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="login-container-body">
+        <label for="employee">Username</label>
+        <input id="employee" name="employee" type="username" aria-describedby="employee-help" pInputText [(ngModel)]="employeeEmail" required />
+        <!-- <small *ngIf="!employee?.valid && (employee?.dirty || employee?.touched)">Employeeid is required</small> -->
       </div>
-    </div>
-    <input type="text" pInputText />
-    <p-button label="Link" styleClass="p-button-link"></p-button>
-    <p-checkbox name="groupname" value="val1"></p-checkbox>
-<p-checkbox name="groupname" value="val2"></p-checkbox>
+      <button [disabled]="!loginForm.valid" type="submit" class="btn btn-danger">Login</button>
 
-  </div>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,27 @@
+
+.login{
+    height: 100%;
+    *{
+        display: block;
+    }
+    &-container{
+        background: rgb(238,174,202);
+        background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        box-shadow:0px 0px 8px 2px #888888;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border: 1px solid #161528;
+        border-radius: 4px;
+
+        &-header{
+            background-color: #7f3082;
+            padding: 20px 20px 10px 20px;
+        }
+        &-body{
+            padding: 0px 20px 20px 20px;
+        }
+    }
+    
+}
