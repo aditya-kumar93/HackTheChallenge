@@ -7,17 +7,18 @@
             <div class="row new-challenge-form-section">
                 <label class="col-4"> Title </label>
                 <input class="col" type="text" pInputText formControlName="name" />
+                <div class="col-7 offset-4  validation-error" *ngIf="!newChallengeForm.controls['name'].valid && newChallengeForm.controls['name'].touched"> title is required</div>
             </div>
             <div class="row new-challenge-form-section">
                 <label class="col-4">Description</label>
                 <textarea class="col" pInputTextarea formControlName="description"></textarea>
+                <div class="col-7 offset-4  validation-error" *ngIf="newChallengeForm.controls['description'].invalid && newChallengeForm.controls['description'].touched"> description is required</div>
             </div>
             <div class="row new-challenge-form-section">
                 <label class="col-4">Tags</label>
                 <p-multiSelect class="col px-0" [appendTo]="'body'" [options]="tagsList" formControlName="tags" optionLabel="name" optionValue="name"></p-multiSelect>
-            </div>
-        
-        
+                 <div class="col-7 offset-4 validation-error" *ngIf="!newChallengeForm.controls['tags'].valid && newChallengeForm.controls['tags'].touched"> select atleast one tag</div>
+            </div>   
         
         </form>
         

@@ -29,14 +29,15 @@ export class NewChallengeComponent implements OnInit {
   ngOnInit(): void {
 
     this.newChallengeForm = this.formBuilder.group({
-      name: [, Validators.required],
-      description: [, Validators.required],
-      tags: [, Validators.required],
+      name: ['', Validators.required],
+      description: ['', Validators.required],
+      tags: [null, Validators.required],
     })
   }
 
   addNewChallenge() {
 
+    this.newChallengeForm.markAllAsTouched();
     if (this.newChallengeForm.valid) {
       let newChallnege: IChallenges = {
         ...this.newChallengeForm.value,
