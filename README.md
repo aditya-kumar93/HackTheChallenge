@@ -1,11 +1,32 @@
 # HackTheChallenge
  Sample app for publishing ideas and challenges
  
- ##NOTES
+ ## Notes
  The app should allow you to enter the main page after logging in using some random EMployeeId(basic implementation of guards).
  After loggin in you can (1)add new challenges to the existing ones(stored in browser storage just for testing purposes)
   (2) sort existing ones
   (3) like/unlike existing ones and newly created ones
+  
+  
+##Make sure angular cli is installed in your system.
+
+
+$ npm install -g @angular/cli
+
+
+##clone the repo and navigate inside the repo and type in the terminal
+
+
+$ npm i (will install all packages required by app to run)
+
+
+##To run this application
+
+
+$ ng serve
+
+
+Ignore
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
 
