@@ -1,8 +1,10 @@
+import { DataStorageService } from './../services/data-storage.service';
 import { ChallengesService } from './../services/challenges.service';
 import { IChallenges } from './../interfaces/challenges';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/internal/operators/map';
 import { switchMap } from 'rxjs/internal/operators/switchMap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,7 +19,9 @@ export class DashboardComponent implements OnInit {
   sortOptions : string[] = ['LIKES','CREATED_ON'];
   challengeDialogVisibility : boolean = false;
 
-  constructor(private challengesService : ChallengesService) { }
+  constructor(private challengesService : ChallengesService,
+              private dataStorageService : DataStorageService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.getChallenges();
@@ -79,6 +83,12 @@ export class DashboardComponent implements OnInit {
       this.challenges.sort((a,b) => { return a.likesCount - b.likesCount});
     }
    
+  }
+
+  logout() {
+    this.dataStorageService.removeItem('employee').subscribe(() => {
+      this.router.navigate(['/', 'sign_in']);
+    });
   }
 
 

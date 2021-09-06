@@ -2,7 +2,11 @@
 <div class="dashboard-container">
     <div class="d-flex justify-content-between mx-3 my-2">
         <button class="btn btn-success" (click)="openChallengeDialog()">New Challenge</button>
-        <p-dropdown [options]="sortOptions" [(ngModel)]="selectedOption" (onChange)="sortChanged($event)"></p-dropdown>
+        <div class="d-flex">
+            <p-dropdown [options]="sortOptions"  [(ngModel)]="selectedOption" (onChange)="sortChanged($event)"></p-dropdown>
+            <button class="btn btn-danger ms-2" (click)="logout()">Logout</button>
+        </div>
+        
     </div>
 
 
