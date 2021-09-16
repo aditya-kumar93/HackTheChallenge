@@ -23,7 +23,8 @@ export class ChallengesService {
         description: `Smart India Hackathon is a nationwide initiative to provide students with a platform to solve some of the pressing problems we face in our daily lives, and thus inculcate a culture of product innovation and a mindset of problem-solving. The first three editions SIH2017, SIH2018 and SIH2019 proved to be extremely successful in promoting innovation out-of-the-box thinking in young minds, especially engineering students from across India.`,
         tags: ['FEATURE'],
         isLiked: true,
-        createdOn: new Date('June 01 2019')
+        createdOn: new Date('June 01 2019'),
+        createdBy: 'Aditya'
       },
       {
         id: 2,
@@ -33,6 +34,7 @@ export class ChallengesService {
         tags: ['FEATURE', 'TECH'],
         isLiked: false,
         createdOn: new Date('August 10 2018'),
+        createdBy: 'Aditya'
       },
       {
         id: 4,
@@ -41,7 +43,8 @@ export class ChallengesService {
         description: `Smart India Hackathon is a nationwide initiative to provide students with a platform to solve some of the pressing problems we face in our daily lives, and thus inculcate a culture of product innovation and a mindset of problem-solving. The first three editions SIH2017, SIH2018 and SIH2019 proved to be extremely successful in promoting innovation out-of-the-box thinking in young minds, especially engineering students from across India.`,
         tags: ['TECH'],
         isLiked: false,
-        createdOn: new Date('December 05 2020')
+        createdOn: new Date('December 05 2020'),
+        createdBy: 'Aditya'
       },
       {
         id: 3,
@@ -50,7 +53,8 @@ export class ChallengesService {
         description: `Smart India Hackathon is a nationwide initiative to provide students with a platform to solve some of the pressing problems we face in our daily lives, and thus inculcate a culture of product innovation and a mindset of problem-solving. The first three editions SIH2017, SIH2018 and SIH2019 proved to be extremely successful in promoting innovation out-of-the-box thinking in young minds, especially engineering students from across India.`,
         tags: ['TECH'],
         isLiked: false,
-        createdOn: new Date('September 01 2020')
+        createdOn: new Date('September 01 2020'),
+        createdBy: 'Aditya'
       }
     ]
     

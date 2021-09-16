@@ -1,6 +1,9 @@
 
 .dashboard-container{
     
+    &-header{
+        background-color: green;
+    }
     .gold-liked{
         color: goldenrod;
     }

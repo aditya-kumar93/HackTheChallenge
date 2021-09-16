@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
 
   challenges : IChallenges[] = [];
   selectedOption : string = 'LIKES';
+  loggedInUser! : string;
   
   sortOptions : string[] = ['LIKES','CREATED_ON'];
   challengeDialogVisibility : boolean = false;
@@ -25,6 +26,10 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getChallenges();
+
+    this.dataStorageService.getItem('employee').subscribe(_ =>{
+      this.loggedInUser = _ ? _ : '';
+    });
   }
 
   openChallengeDialog(){
@@ -53,6 +58,11 @@ export class DashboardComponent implements OnInit {
   }
 
   liked(id: number) {
+
+    if(this.loggedInUser == this.challenges.filter(_ => _.id == id)[0].createdBy){
+      
+      return;
+    }
     this.challengesService.getChallengeById(id).pipe(
       map((challenge) => {
         return {

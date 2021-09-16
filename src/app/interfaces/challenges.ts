@@ -6,6 +6,7 @@ export interface IChallenges {
     tags: Tag[];
     isLiked: boolean;
     createdOn: Date;
+    createdBy: string;
   }
   
   type Tag = 'FEATURE' | 'TECH' | 'ANGULAR' | 'SCRIPBOX';

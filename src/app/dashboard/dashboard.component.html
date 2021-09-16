@@ -1,7 +1,7 @@
 
 <div class="dashboard-container">
-    <div class="d-flex justify-content-between mx-3 my-2">
-        <button class="btn btn-success" (click)="openChallengeDialog()">New Challenge</button>
+    <div class="d-flex justify-content-between dashboard-container-header  mx-3 my-2">
+        <button class="btn btn-success"  (click)="openChallengeDialog()">New Challenge</button>
         <div class="d-flex">
             <p-dropdown [options]="sortOptions"  [(ngModel)]="selectedOption" (onChange)="sortChanged($event)"></p-dropdown>
             <button class="btn btn-danger ms-2" (click)="logout()">Logout</button>
@@ -16,7 +16,7 @@
        <h4>{{challenge.name}} ({{challenge.createdOn | date : 'MMM d, y'}})</h4>
        <p>{{challenge.description}}</p>
        <div>
-        <i class="pi pi-thumbs-up" [ngClass]="{'gold-liked': challenge.isLiked}" (click)="liked(challenge.id)"></i>
+        <i class="pi pi-thumbs-up"  [ngClass]="{'gold-liked': challenge.isLiked}" (click)="liked(challenge.id)"></i>
         <small class="font-weight-bold">&nbsp; ({{challenge.likesCount}})</small>
         <ng-container  *ngFor="let tag of challenge.tags">
             <p-tag class="mx-2" value="{{tag | uppercase}}"></p-tag>
